@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 {
     SetConsoleOutputCP(CP_UTF8);
 
-    if (CheckMutex(_T("NCUT_TANetAutoLoginMutex.")))
+    if (CheckMutex(_T("NCUT_TANetAutoLoginMutex")))
     {
         MessageBox(NULL, _T("程式已經開啟"), _T("勤益網路自動登入系統"), MB_TOPMOST | MB_ICONERROR);
         return 1;
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
         }
     }
 
-    while (1);
+    std::cin.get();
     return 0;
 }
 
